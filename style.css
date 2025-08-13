@@ -70,16 +70,6 @@ nav select {
   color: #d4af37; /* dorado para precios */
 }
 
-footer {
-  text-align: center;
-  margin-top: 50px;
-  color: #777;
-  font-size: 0.8rem;
-  border-top: 1px solid #333;
-  padding-top: 15px;
-}
-
-/* Etiqueta nuevo stock */
 .etiqueta-nuevo {
   position: absolute;
   top: 10px;
@@ -93,7 +83,6 @@ footer {
   text-transform: uppercase;
 }
 
-/* Títulos de secciones */
 h2.seccion-titulo {
   grid-column: 1 / -1;
   text-align: center;
@@ -101,4 +90,27 @@ h2.seccion-titulo {
   margin-bottom: 20px;
   font-size: 1.8rem;
   font-weight: 700;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  color: #777;
+  font-size: 0.8rem;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+}
+
+footer .contacto p {
+  margin: 5px 0;
+  color: #ccc;
+}
+
+footer .contacto a {
+  color: #d4af37;
+  text-decoration: none;
+}
+
+footer .contacto a:hover {
+  text-decoration: underline;
 }
