@@ -1,0 +1,90 @@
+/* Fuente limpia y elegante */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Encabezado estilo tienda de lujo */
+header {
+    background-color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #b22222; /* rojo vino */
+}
+
+/* Grid de productos */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px;
+}
+
+.product {
+    text-align: center;
+    border: 1px solid #eee;
+    padding: 15px;
+    background-color: #fafafa;
+    transition: transform 0.2s ease-in-out;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.product h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin: 10px 0 5px;
+}
+
+.product p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.product:hover {
+    transform: scale(1.03);
+    border-color: #b22222;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 10px;
+        display: inline-block;
+    }
+}
