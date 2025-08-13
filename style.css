@@ -1,30 +1,59 @@
+/* Fuente premium desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 20px;
   background-color: #121212; /* negro muy oscuro */
   color: #eee; /* blanco suave */
 }
 
+/* Header */
 header {
   text-align: center;
   margin-bottom: 40px;
   color: #d4af37; /* dorado elegante para el título */
 }
 
+/* Menú de filtros */
+nav {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: linear-gradient(90deg, #2c2c2c, #121212);
+  padding: 15px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
 nav label {
-  font-weight: bold;
-  margin-right: 5px;
-  color: #eee;
+  font-weight: 600;
+  color: #d4af37;
+  font-size: 1rem;
+  align-self: center;
 }
 
 nav select {
-  padding: 5px 10px;
-  border-radius: 4px;
-  border: 1px solid #555; /* borde más suave para modo oscuro */
+  padding: 8px 15px;
+  border-radius: 25px;
+  border: 2px solid #d4af37;
   background-color: #1e1e1e;
-  color: #eee;
+  color: #d4af37;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+nav select:hover, nav select:focus {
+  background-color: #d4af37;
+  color: #121212;
+  outline: none;
+}
+
+/* Secciones de catálogo */
 .catalogo {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -32,6 +61,7 @@ nav select {
   margin-bottom: 50px;
 }
 
+/* Producto */
 .producto {
   border: 1px solid #333;
   border-radius: 8px;
@@ -70,6 +100,7 @@ nav select {
   color: #d4af37; /* dorado para precios */
 }
 
+/* Etiqueta nuevo stock */
 .etiqueta-nuevo {
   position: absolute;
   top: 10px;
@@ -83,6 +114,7 @@ nav select {
   text-transform: uppercase;
 }
 
+/* Títulos de secciones */
 h2.seccion-titulo {
   grid-column: 1 / -1;
   text-align: center;
@@ -92,6 +124,7 @@ h2.seccion-titulo {
   font-weight: 700;
 }
 
+/* Footer */
 footer {
   text-align: center;
   margin-top: 50px;
