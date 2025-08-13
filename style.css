@@ -1,82 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
-
 body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #fff;
-    color: #222;
-    line-height: 1.6;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #fff;
+  color: #333;
 }
 
-/* Header */
 header {
-    background-color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: #b22222; /* rojo vino estilo True Religion */
+nav {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-/* Catálogo y productos */
-.catalogo, .products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin: 40px 0;
+nav label {
+  font-weight: bold;
+  margin-right: 5px;
 }
 
-/* Productos estilo artículo */
-.producto, .product {
-    background-color: #fafafa;
-    border: 1px solid #eee;
-    padding: 15px;
-    text-align: center;
-    transition: transform 0.2s ease-in-out;
+nav select {
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
 
-.producto img, .product img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-    margin-bottom: 10px;
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
 }
 
-.producto h2, .product h3 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 1.4rem;
-    margin: 10px 0 5px;
+.producto {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  background-color: #fafafa;
+  transition: box-shadow 0.3s ease;
 }
 
-.producto p, .product p {
-    margin: 5px 0;
+.producto:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.producto p strong, .product p strong {
-    color: #b22222;
+.producto img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 15px;
 }
 
-/* Efecto hover para los productos */
-.producto:hover, .product:hover {
-    transform: scale(1.05);
-    border-color: #b22222;
+.producto h2 {
+  font-size: 1.3rem;
+  margin: 10px 0 8px;
+  color: #b22222;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-    .catalogo, .products {
-        grid-template-columns: 1fr;
-    }
+.producto p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
 
-    header h1 {
-        font-size: 2rem;
-    }
+footer {
+  text-align: center;
+  margin-top: 50px;
+  color: #888;
+  font-size: 0.8rem;
 }
