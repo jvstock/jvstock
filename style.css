@@ -1,4 +1,3 @@
-/* Fuente limpia y elegante */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
 
 body {
@@ -7,84 +6,77 @@ body {
     background-color: #fff;
     color: #222;
     line-height: 1.6;
+    padding: 20px;
 }
 
-/* Encabezado estilo tienda de lujo */
+/* Header */
 header {
     background-color: #fff;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 20px 0;
+    text-align: center;
     border-bottom: 1px solid #ddd;
 }
 
 header h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 1px;
+    color: #b22222; /* rojo vino estilo True Religion */
 }
 
-nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #222;
-    font-weight: 500;
-}
-
-nav a:hover {
-    color: #b22222; /* rojo vino */
-}
-
-/* Grid de productos */
-.products {
+/* Catálogo y productos */
+.catalogo, .products {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    padding: 40px;
+    margin: 40px 0;
 }
 
-.product {
-    text-align: center;
+/* Productos estilo artículo */
+.producto, .product {
+    background-color: #fafafa;
     border: 1px solid #eee;
     padding: 15px;
-    background-color: #fafafa;
+    text-align: center;
     transition: transform 0.2s ease-in-out;
 }
 
-.product img {
-    width: 100%;
+.producto img, .product img {
+    max-width: 100%;
     height: auto;
-    max-height: 300px;
     object-fit: cover;
+    margin-bottom: 10px;
 }
 
-.product h3 {
+.producto h2, .product h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
+    font-weight: 700;
+    font-size: 1.4rem;
     margin: 10px 0 5px;
 }
 
-.product p {
-    margin: 0;
-    font-size: 0.95rem;
+.producto p, .product p {
+    margin: 5px 0;
 }
 
-.product:hover {
-    transform: scale(1.03);
+.producto p strong, .product p strong {
+    color: #b22222;
+}
+
+/* Efecto hover para los productos */
+.producto:hover, .product:hover {
+    transform: scale(1.05);
     border-color: #b22222;
 }
 
 /* Responsive */
 @media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        text-align: center;
+    .catalogo, .products {
+        grid-template-columns: 1fr;
     }
 
-    nav a {
-        margin: 10px;
-        display: inline-block;
+    header h1 {
+        font-size: 2rem;
     }
 }
